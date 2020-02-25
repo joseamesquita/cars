@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Car
 {
@@ -35,19 +36,37 @@ public class Program
     string stringMaxPrice = Console.ReadLine();
     int maxPrice = int.Parse(stringMaxPrice);
 
+    // int[] Total = {volkswagen.Price, yugo.Price, ford.Price, amc.Price};
+  
     List<Car> CarsMatchingSearch = new List<Car>(0);
 
     foreach (Car automobile in Cars)
-    {
-      if (automobile.WorthBuying(maxPrice))
+    { 
+     if (automobile.WorthBuying(maxPrice))
       {
         CarsMatchingSearch.Add(automobile);
       }
     }
 
-    foreach(Car automobile in CarsMatchingSearch)
+  if (CarsMatchingSearch.Count > 0)
+  {
+    foreach (Car automobile in CarsMatchingSearch)
     {
       Console.WriteLine(automobile.MakeModel);
     }
+  } 
+  else 
+  {
+    Console.WriteLine("No cars in your budget.");
+    }
   }
 }
+
+
+
+//     foreach(Car automobile in CarsMatchingSearch)
+//     {
+//          Console.WriteLine(automobile.MakeModel);
+//     }
+//   }
+// }
