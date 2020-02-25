@@ -35,8 +35,6 @@ public class Program
     Console.WriteLine("Enter maximum price: ");
     string stringMaxPrice = Console.ReadLine();
     int maxPrice = int.Parse(stringMaxPrice);
-
-    // int[] Total = {volkswagen.Price, yugo.Price, ford.Price, amc.Price};
   
     List<Car> CarsMatchingSearch = new List<Car>(0);
 
@@ -61,12 +59,3 @@ public class Program
     }
   }
 }
-
-
-
-//     foreach(Car automobile in CarsMatchingSearch)
-//     {
-//          Console.WriteLine(automobile.MakeModel);
-//     }
-//   }
-// }
