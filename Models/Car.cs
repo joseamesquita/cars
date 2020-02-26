@@ -7,12 +7,29 @@ namespace Dealership.Models {
     private string _makeModel;
     private int _price;
     private int _miles;
+    private string _color;
 
-    public Car(string makeModel, int price, int miles)
+    public Car(string makeModel, int price, int miles, string color)
     {
       _makeModel = makeModel;
       _price = price;
       _miles = miles;
+      _color = color;
+    } 
+
+    public static string MakeSound(string sound)
+    {
+      return "Our cars sound like " + sound;
+    }
+
+    public bool CarColor(string color)
+    {
+      return (_color == color);
+    }
+
+    public string GetCarColor()
+    {
+      return _color;
     }
 
     public string GetMakeModel()
